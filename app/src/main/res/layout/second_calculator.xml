@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/second_calculator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondCalculator">
+
+    <!-- ScrollView to enable scrolling if needed -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Main container for inputs, button, and results -->
+        <LinearLayout
+            android:id="@+id/edittext_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <!-- "Назад" Button -->
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:padding="8dp"
+                android:text="Назад"
+                android:textSize="20sp" />
+
+            <!-- Input fields -->
+            <EditText
+                android:id="@+id/ucn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/black"
+                android:hint="ucn"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/sk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:hint="sk"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/uk_per"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:hint="uk_per"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/s_mom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:hint="s_mom"
+                android:padding="12dp" />
+
+            <!-- "Обчислити" Button -->
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:text="Обчислити"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/error1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="16dp"
+                android:textSize="16sp" />
+
+            <!-- Horizontal layout for first result -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="12dp"
+                    android:text="XC:"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/result_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/black"
+                    android:enabled="false"
+                    android:hint="Результат 1"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+            <!-- Horizontal layout for second result -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="12dp"
+                    android:text="Xt:"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/result_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/black"
+                    android:enabled="false"
+                    android:hint="Результат 2"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+            <!-- Horizontal layout for third result -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="12dp"
+                    android:text="Сумарнрй опір точки:"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/result_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/black"
+                    android:enabled="false"
+                    android:hint="Результат 3"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+            <!-- Horizontal layout for fourth result -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="12dp"
+                    android:text="Поч діюче знач струму трифаз КЗ:"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/result_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/black"
+                    android:enabled="false"
+                    android:hint="Результат 4"
+                    android:padding="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
